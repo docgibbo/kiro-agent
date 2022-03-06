@@ -26,8 +26,9 @@ def volume(data):
     call(["amixer", "-D", "pulse", "sset", "Master", "{}%".format(data)])
 
 
+@sio.event
 def startKiro(data):
-    print('start kiro: '+data)
+    print('start kiro: ', data)
     os.system('chromium-browser --kiosk www.kiro.com')
 
 
