@@ -11,7 +11,7 @@ import time
 config = configparser.RawConfigParser()
 config.read('server.properties')
 
-sio = socketio.Client()
+sio = socketio.Client(ssl_verify=False)
 auth_token = ''
 
 
