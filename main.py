@@ -35,7 +35,7 @@ def startKiro(data):
 @sio.event
 def matrix(data):
     print('start matrix: ', data)
-    os.system(data)
+    os.system('ls -l')
 
 
 @sio.event
