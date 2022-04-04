@@ -33,6 +33,12 @@ def startKiro(data):
 
 
 @sio.event
+def matrix(data):
+    print('start matrix: ', data)
+    os.system(data)
+
+
+@sio.event
 def performanceOS(data):
     print('get performace of os')
     cpu_usage = str(os.popen("top -n1 | awk '/Cpu\(s\):/ {print $2}'").readline().strip())
